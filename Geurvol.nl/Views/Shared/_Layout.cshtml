@@ -6,6 +6,10 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLxQVdlJE8Rvaro7Ep_6skWOLWkHMeixA&sensor=false"> </script>
+
 
 </head>
 <body>
@@ -21,22 +25,25 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Brand</a>
+                    <a class="navbar-brand" href="#">Geurvol.nl</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Geurbranders</a></li>
+                        <li><a href="#">Geurstokken</a></li>
+                        <li><a href="#">Auto-geuren</a></li>
+                        <li><a href="#">Navulling</a></li>
 
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Shoppingcart: 0 items | €0.-</a></li>
-                        <li><a href="#">Inloggen</a></li>
-                        
+                        @Html.Partial("_ShoppingCart")
+                        @Html.Partial("_LoginPartial")
                     </ul>
+                    
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
@@ -45,10 +52,8 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
+        
 
-
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
     </div>
 </body>

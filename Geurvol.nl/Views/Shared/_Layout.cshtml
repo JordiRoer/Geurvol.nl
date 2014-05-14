@@ -9,6 +9,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLxQVdlJE8Rvaro7Ep_6skWOLWkHMeixA&sensor=false"> </script>
+    <script type="text/javascript" src="~/Scripts/webScript.js"></script>
 
 
 </head>
@@ -25,14 +26,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Geurvol.nl</a>
+                    <a class="navbar-brand" href="/Home/Index">Geurvol.nl</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Geurbranders</a></li>
+                        <li class="active"><a href="/Home/Index">Home</a></li>
+                        <li>@Html.ActionLink("Geurbranders", "Index", "Shop", new { type = 1 }, new { })</li>
                         <li><a href="#">Geurstokken</a></li>
                         <li><a href="#">Auto-geuren</a></li>
                         <li><a href="#">Navulling</a></li>

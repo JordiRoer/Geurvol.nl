@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-9">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="col-sm-1">#</td>
+                            <td class="col-sm-1"></td>
+                            <td class="col-sm-6">Product</td>
+                            <td class="col-sm-1">Aantal</td>
+                            <td class="col-sm-1">Prijs</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="http://placehold.it/50x50" /></td>
+                            <td>Product A<p><small>Product nr: 123123123123</small></p></td>
+                            <td>1</td>
+                            <td>€5.-</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="http://placehold.it/50x50" /></td>
+                            <td>Product A<p><small>Product nr: 123123123123</small></p></td>
+                            <td>1</td>
+                            <td>€5.-</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><img src="http://placehold.it/50x50" /></td>
+                            <td>Product A<p><small>Product nr: 123123123123</small></p></td>
+                            <td>1</td>
+                            <td>€5.-</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><img src="http://placehold.it/50x50" /></td>
+                            <td>Product A<p><small>Product nr: 123123123123</small></p></td>
+                            <td>1</td>
+                            <td>€5.-</td>
+                        </tr>
+                        @* Automatic total price *@
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Totaal:</strong></td>
+                            <td>€20.-</td>
+                        </tr>
+                    </tbody>
+                </table>
+        <div class="col-xs-10"></div>
+        <div class="col-xs-2"><button type="button" class="btn btn-primary">Afrekenen</button></div>
+
+        
+    </div>
+</div>
+
